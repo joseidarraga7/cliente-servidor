@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consulta de Capitales</title>
+</head>
+<body>
+    <h1>Consulta de Capitales</h1>
+    <form method="POST" action="/consultar">
+        <label for="pais">Ingrese el nombre de un país:</label>
+        <input type="text" id="pais" name="pais">
+        <button type="submit">Consultar</button>
+    </form>
+    {% if resultado %}
+    <h2>Respuesta del Servidor:</h2>
+    <p>La capital de {{ resultado.pais }} es {{ resultado.capital }}</p>
+    {% endif %}
+</body>
+</html>
